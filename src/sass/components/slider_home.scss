@@ -63,13 +63,6 @@
 
                     @include tablet() {
                         font-size: 1.8rem;
-
-                        display:-webkit-box;
-                        -webkit-line-clamp:3;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        word-break: break-word;
                     }
                 }
 
@@ -133,7 +126,7 @@
                     }
 
                     @include mobile() {
-                        height: 87%;
+                        height: 90%;
                         top: 48%;
                         z-index: 99;
                     }
@@ -197,6 +190,15 @@
                         transition: unset;
                     }
                 }
+
+                p {
+                    display:-webkit-box;
+                    -webkit-line-clamp:3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: break-word;
+                }
             }
 
             .slider-home__list__item__img {
@@ -250,7 +252,7 @@
         }
 
         @include mobile() {
-            bottom: 50px;
+            bottom: 25px;
         }
     }
 
