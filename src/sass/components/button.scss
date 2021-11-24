@@ -1,0 +1,56 @@
+.btn {
+
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+
+    &__text {
+        font-size: 1.6rem;
+        color: $text_white;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        padding: 1.3rem 3.5rem;
+
+        transform: translateX(0);
+    }
+
+    &__cart {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        @include flex(center, center);
+
+        transform: translateX(-100%);
+
+        i {
+            font-size: 2.7rem;
+            color: $text_white;
+        }
+    }
+
+    &__text, &__cart {
+        transition: transform 0.4s ease;
+    }
+
+    &.animate:hover {
+        .btn__text {
+            transform: translateX(100%);
+        }
+
+        .btn__cart {
+            transform: translateX(0);
+        }
+    }
+
+    &-sm {
+        .btn__text {
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: unset;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    color: $text_black;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25px;
+
+    @include mobile() {
+        line-height: 1.4rem;
+    }
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: $main_color;
+}
+
+li {
+    list-style-type: none;
+}
+
+a, li, span {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+@each $color, $value in $colors {
+    .bg-#{$color} {
+        background-color: $value;
+    }
+
+    .color-#{$color} {
+        color: $value;
+    }
+}
+
+@each $size in $numbers {
+    .col-#{$size} {
+        grid-template-columns: repeat($size, 1fr);
+    }
+}
+
+@each $size in $numbers {
+        .col-md-#{$size} {
+           @include tablet() {
+                grid-template-columns: repeat($size, 1fr);
+           }
+        }
+}
+
+@each $size in $numbers {
+    .col-sm-#{$size} {
+        @include mobile() {
+            grid-template-columns: repeat($size, 1fr);
+        }
+    }
+}
+
+.container {
+    max-width: 1620px;
+    width: 100%;
+
+    margin: auto;
+    padding: 0 50px;
+    overflow: hidden;
+
+    @include tablet() {
+        padding: 0 10px;
+    }
+
+    @include mobile() {
+        padding: 0 10px;
+    }
+}
+
+.grid {
+    display: grid;
+}
+
+
+
+
+
+
+

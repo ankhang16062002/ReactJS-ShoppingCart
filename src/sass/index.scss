@@ -1,0 +1,17 @@
+@import './variables';
+@import './mixin';
+@import './base';
+
+//scss components
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/slider_home.scss';
+@import './components/button.scss';
+@import './components/section.scss';
+@import './components/policycart.scss';
+@import './components/productcart.scss';
+@import './components/checkbox.scss';
+@import './components//catalog.scss';
+@import './components/productview.scss';
+@import './components//product_modal.scss';
+@import './components/cart.scss'
