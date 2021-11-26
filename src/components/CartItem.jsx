@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import PropTypes from 'prop-types'
 import numberWithCommat from '../utils/numberWithCommat'
 import { useDispatch } from 'react-redux'
@@ -43,6 +43,10 @@ const CartItem = (props) => {
         }
         ))
     }
+
+    useEffect(() => {
+        setQuantity(item.quantity)
+    }, [item.quantity])
 
     return (
         <div className = 'cart__products__item'>
